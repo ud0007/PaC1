@@ -4,8 +4,9 @@ pipeline {
   string defaultValue: 'DevOps', name: 'subjetct'
   choice choices: ['Linux', 'Hp-ux', 'aix', 'solaris'], name: 'OS'
 }
-  environment
+  environment {
   var1 = 90
+  }
   stages {
     stage ('my first stage') {
       steps {
