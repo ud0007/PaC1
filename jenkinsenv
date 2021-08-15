@@ -10,6 +10,7 @@ pipeline {
     stage ('my first stage') {
       steps {
         script {
+          myvar1 = 100
           println "My subjetct value is ${params.subjetct}"
           println "My OS value is ${params.OS}"
           println "Accessing var1 value is ${env.var1}"
