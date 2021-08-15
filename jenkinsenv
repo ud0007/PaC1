@@ -1,0 +1,17 @@
+pipeline {
+  agent any
+  environment {
+    subject = "Jenkins PaC"
+    batchno = "maybatch"
+  }
+  stages {
+    stage ('my first stage') {
+      steps {
+        script {
+          print "My subject is ${env.subject}"
+          print "My batchno is ${env.batchno}"
+        }
+      }
+    }
+  }
+}
