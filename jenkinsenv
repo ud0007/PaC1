@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     subject = "Jenkins PaC"
-    batchno = "maybatch"
+    batchno = "Maybatch"
   }
   stages {
     stage ('my first stage') {
