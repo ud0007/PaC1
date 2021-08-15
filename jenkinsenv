@@ -2,14 +2,14 @@ pipeline {
   agent any
   environment {
     subject = "Jenkins PaC"
-    batchno = "Maybatch"
+    batchname = "Devopsbatch"
   }
   stages {
     stage ('my first stage') {
       steps {
         script {
           print "My subject is ${env.subject}"
-          print "My batchno is ${env.batchno}"
+          print "My batchname is ${env.batchname}"
         }
       }
     }
