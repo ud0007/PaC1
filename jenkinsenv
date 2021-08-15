@@ -1,17 +1,22 @@
 pipeline {
   agent any
-  environment {
-    subject = "Jenkins PaC"
-    batchname = "Devops"
-  }
+  parameters {
+  string defaultValue: 'DevOps', name: 'subjetct'
+  choice choices: ['Linux', 'Hp-ux', 'aix', 'solaris'], name: 'OS'
+}
+  environment
+  var1 = 90
   stages {
     stage ('my first stage') {
       steps {
         script {
-          print "My subject is ${env.subject}"
-          print "My batchname is ${env.batchname}"
+          println "My subjetct value is ${params.subjetct}"
+          println "My OS value is ${params.OS}"
+          println "Accessing var1 value is ${env.var1}"
+          println "myvar1 value is ${myvar1}"
         }
       }
     }
   }
 }
+
