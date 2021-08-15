@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     subject = "Jenkins PaC"
-    batchname = "Devopsbatch"
+    batchname = "Devops"
   }
   stages {
     stage ('my first stage') {
